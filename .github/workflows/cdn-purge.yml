@@ -1,0 +1,41 @@
+name: jsDelivr CDN purge
+
+# TizenBrew, bu uygulamayı jsDelivr üzerinden çekiyor:
+#   https://cdn.jsdelivr.net/gh/zeyteu/dsmart@main/<dosya>
+# jsDelivr GitHub içeriğini cache'ler (gün/saatlerce), bu yüzden main'e her
+# merge'den sonra cache'i temizleyip TV'lerin güncel sürümü almasını sağlıyoruz.
+# purge.jsdelivr.net auth istemez — secret gerekmez.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # gerekince elle de tetiklenebilir
+
+# Aynı anda tek purge çalışsın; arka arkaya merge'lerde sadece sonuncusu önemli.
+concurrency:
+  group: jsdelivr-purge
+  cancel-in-progress: false
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge jsDelivr cache (@main)
+        run: |
+          REPO="zeyteu/dsmart"
+          REF="main"
+          FILES="index.html app.js channels.js service.js package.json"
+          fail=0
+          for f in $FILES; do
+            url="https://purge.jsdelivr.net/gh/${REPO}@${REF}/${f}"
+            echo "→ purging ${f}"
+            # 5'e kadar dene; jsDelivr ara sıra 429/5xx döndürebiliyor.
+            ok=0
+            for attempt in 1 2 3 4 5; do
+              code=$(curl -fsS -o /tmp/purge.json -w '%{http_code}' "$url") && { cat /tmp/purge.json; echo; ok=1; break; }
+              echo "  deneme ${attempt} başarısız (http ${code:-?}), tekrar deneniyor…"
+              sleep $((attempt * 3))
+            done
+            [ "$ok" = 1 ] || { echo "  ✗ ${f} purge edilemedi"; fail=1; }
+          done
+          exit $fail
