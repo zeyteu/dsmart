@@ -53,7 +53,7 @@ function updatePreview(pct, pos, behind, live) {
   var fr = scrubbing ? nearestFrame(pos) : null;
   if (!fr) { box.classList.remove('dsg-on'); return; }
   var pv = box.querySelector('canvas'); try { pv.getContext('2d').drawImage(fr.c, 0, 0, pv.width, pv.height); } catch (e) {}
-  box.querySelector('.dsg-sk-prev-t').textContent = live ? 'CANLI' : ('-' + Math.floor(behind / 60) + ':' + pad2(Math.floor(behind % 60)));
+  box.querySelector('.dsg-sk-prev-t').textContent = '-' + Math.floor(behind / 60) + ':' + pad2(Math.floor(behind % 60));
   box.style.left = Math.max(9, Math.min(91, pct)) + '%';
   box.classList.add('dsg-on');
 }
