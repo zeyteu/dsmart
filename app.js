@@ -255,9 +255,13 @@ function toast(t) { if (!toastEl) return; toastEl.textContent = t; toastEl.class
 var LOGO_KEY = 'dsg_logos_v3', logoMap = {};
 try { logoMap = JSON.parse(localStorage.getItem(LOGO_KEY) || '{}') || {}; } catch (e) { logoMap = {}; }
 function logoUrl(rec) { return rec ? (logoMap[rec.id] || '') : ''; }
+// Warm the browser image cache so logos appear instantly while fast-zapping
+// (otherwise each channel's <img> network-loads the first time it's shown).
+var _logoWarm = {};
+function preloadLogos() { for (var id in logoMap) { var u = logoMap[id]; if (u && !_logoWarm[id]) { _logoWarm[id] = 1; var im = new Image(); im.src = u; } } }
 function loadLogos() {
   var ids = allChans.map(function (c) { return c.id; }).filter(function (id) { return !logoMap[id]; });
-  if (!ids.length) { dbg('logos cached (' + Object.keys(logoMap).length + ')'); return; }
+  if (!ids.length) { dbg('logos cached (' + Object.keys(logoMap).length + ')'); preloadLogos(); return; }
   var CH = 20, chunks = [], i; for (i = 0; i < ids.length; i += CH) chunks.push(ids.slice(i, i + CH)); // /v1/item/filter caps ~20 results/req
   var done = 0;
   chunks.forEach(function (group) {
@@ -268,7 +272,7 @@ function loadLogos() {
         arr.forEach(function (it) { var lg = (it.images || []).filter(function (x) { return x.type === 'Logo'; })[0]; if (lg && lg.url) logoMap[String(it.id)] = lg.url; });
         try { localStorage.setItem(LOGO_KEY, JSON.stringify(logoMap)); } catch (e) {}
       }).catch(function () {}).then(function () {
-        if (++done === chunks.length) { dbg('logos loaded (' + Object.keys(logoMap).length + ')'); if (guideOpen) drawGuide(); if (bannerEl && _bannerId) { var rc = recById(_bannerId); if (rc) bannerEl.querySelector('.dsg-logobox').innerHTML = logoCell(rc); } }
+        if (++done === chunks.length) { dbg('logos loaded (' + Object.keys(logoMap).length + ')'); preloadLogos(); if (guideOpen) drawGuide(); if (bannerEl && _bannerId) { var rc = recById(_bannerId); if (rc) bannerEl.querySelector('.dsg-logobox').innerHTML = logoCell(rc); } }
       });
   });
 }
@@ -287,7 +291,7 @@ function logoCell(rec) {
 /* =============================================================================
  * 55 — ZAPPING BANNER (logo + EPG now/next + progress + clock + fav star)
  * ============================================================================= */
-var _bannerT = null, _bannerId = null;
+var _bannerT = null, _bannerId = null, _epgT = null;
 function fillBanner(rec, ep) {
   bannerEl.querySelector('.dsg-no').textContent = rec.no || '';
   bannerEl.querySelector('.dsg-logobox').innerHTML = logoCell(rec);
@@ -297,7 +301,8 @@ function fillBanner(rec, ep) {
     prog.textContent = ep.now.name + '  ' + fmtClock(ep.now.start) + '-' + fmtClock(ep.now.end);
     var pct = Math.max(0, Math.min(100, (Date.now() - ep.now.start) / (ep.now.end - ep.now.start) * 100));
     progr.style.display = ''; progr.querySelector('i').style.width = pct + '%';
-  } else { prog.textContent = ''; progr.style.display = 'none'; }
+  } else if (nowCache[rec.id]) { prog.textContent = nowCache[rec.id]; progr.style.display = 'none'; } // instant from bulk now-playing
+  else { prog.textContent = ''; progr.style.display = 'none'; }
   if (ep && ep.next) { nx.innerHTML = '<b>SONRAKİ</b>' + esc(ep.next.name) + '  ' + fmtClock(ep.next.start); nx.style.display = ''; }
   else nx.style.display = 'none';
   bannerEl.querySelector('.dsg-star').textContent = isFav(rec.id) ? '★' : '';
@@ -306,8 +311,13 @@ function fillBanner(rec, ep) {
 function showBanner(rec, preview) {
   if (!bannerEl || !rec) return;
   _bannerId = rec.id;
-  fillBanner(rec, null);
-  nowNext(rec.id).then(function (ep) { if (_bannerId === rec.id && bannerEl.classList.contains('dsg-show')) fillBanner(rec, ep); });
+  fillBanner(rec, null); // instant: logo + name + cached now-playing (no network wait)
+  // Enrich with full now/next + progress, but debounced so fast CH+/- zapping
+  // doesn't fire a per-channel EPG fetch for every channel skimmed past.
+  clearTimeout(_epgT);
+  _epgT = setTimeout(function () {
+    nowNext(rec.id).then(function (ep) { if (_bannerId === rec.id && bannerEl.classList.contains('dsg-show')) fillBanner(rec, ep); });
+  }, 300);
   bannerEl.classList.toggle('dsg-preview', !!preview);
   bannerEl.classList.add('dsg-show');
   clearTimeout(_bannerT); _bannerT = setTimeout(function () { bannerEl.classList.remove('dsg-show'); }, SET.bannerMs);
@@ -676,6 +686,7 @@ function setGuestMode(on) { guestMode = on; chans = on ? allChans.filter(functio
 function startApp() {
   if (splashEl) setTimeout(function () { splashEl.style.opacity = '0'; setTimeout(function () { splashEl.style.display = 'none'; }, 500); }, 400);
   tune(0);
+  fetchBulkNow(allChans.map(function (c) { return c.id; })); // warm now-playing for all channels so zapping shows EPG instantly
   setInterval(function () { if (bannerEl.classList.contains('dsg-show')) bannerEl.querySelector('.dsg-clock').textContent = clockText(); }, 20000);
 }
 function boot() {

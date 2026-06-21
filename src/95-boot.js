@@ -5,6 +5,7 @@ function setGuestMode(on) { guestMode = on; chans = on ? allChans.filter(functio
 function startApp() {
   if (splashEl) setTimeout(function () { splashEl.style.opacity = '0'; setTimeout(function () { splashEl.style.display = 'none'; }, 500); }, 400);
   tune(0);
+  fetchBulkNow(allChans.map(function (c) { return c.id; })); // warm now-playing for all channels so zapping shows EPG instantly
   setInterval(function () { if (bannerEl.classList.contains('dsg-show')) bannerEl.querySelector('.dsg-clock').textContent = clockText(); }, 20000);
 }
 function boot() {
