@@ -24,7 +24,7 @@ function fetchCatchupEpg(id) {
   return fetch(u).then(function (r) { return r.json(); }).then(function (arr) { return (arr || []).map(epgRange).sort(function (a, b) { return a.start - b.start; }); }).catch(function () { return []; });
 }
 function cuDayKey(off) { var d = new Date(); d.setDate(d.getDate() + off); return d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate(); }
-function cuDayLabel(off) { if (off === 0) return 'Bugün'; if (off === -1) return 'Dün'; var d = new Date(); d.setDate(d.getDate() + off); return TR_DAYS[d.getDay()]; }
+function cuDayLabel(off) { var d = new Date(); d.setDate(d.getDate() + off); return TR_DAYS[d.getDay()]; }
 function cuDayItems(off) {
   var k = cuDayKey(off), out = off === 0 ? [{ live: true }] : [];
   for (var i = 0; i < cuAll.length; i++) { var p = cuAll[i], dd = new Date(p.start); if (dd.getFullYear() + '-' + dd.getMonth() + '-' + dd.getDate() === k) out.push(p); }
