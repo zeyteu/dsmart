@@ -1,0 +1,783 @@
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 63381)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59199)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53387)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56196)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 79, in do_POST
+    self._route("POST")
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56193)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51305)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59331)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 61842)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58041)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 61981)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65422)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56240)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53238)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50320)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50667)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65036)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 64010)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or url.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65421)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 56256)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58142)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 55919)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 63248)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 63185)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 54694)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 79, in do_POST
+    self._route("POST")
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 61914)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 59035)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 449, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 64597)
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 76, in do_GET
+    self._route("GET")
+    ~~~~~~~~~~~^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 83, in _route
+    self._proxy(method)
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Administrator\Desktop\carbonemit\dsmartgo-app-poc\proxy.py", line 154, in _proxy
+    if "mpegurl" in ctype or path.split("?", 1)[0].endswith(".m3u8"):
+                             ^^^
+NameError: name 'url' is not defined
+----------------------------------------
