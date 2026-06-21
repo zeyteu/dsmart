@@ -109,7 +109,6 @@ in step 3, which finalizes `SIGN.resolve`.
 ## Install (TizenBrew → Module Manager → apps)
 
 ```
-github:okeozek/dsmartgo-app-poc
 ```
 
 > PoC. Free-channel core only; premium/DRM and DVR/EPG are not wired yet.
