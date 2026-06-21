@@ -77,14 +77,6 @@
   #dsg-seek .dsg-sk-live{ font-size:.95vw; font-weight:800; letter-spacing:1px; color:rgba(255,255,255,.4); flex:0 0 auto; }
   #dsg-seek .dsg-sk-live.dsg-on{ color:var(--dsg-accent); }
   #dsg-seek .dsg-sk-hint{ font-size:.85vw; font-weight:700; letter-spacing:.4px; opacity:.55; flex:0 0 auto; }
-  /* YouTube-style scrub preview thumbnail (above the handle) */
-  #dsg-seek .dsg-sk-prev{ position:absolute; left:0; bottom:2.6vh; transform:translateX(-50%); width:21vw; padding:.55vh; border-radius:14px;
-    background:var(--dsg-glass); -webkit-backdrop-filter:var(--dsg-blur); backdrop-filter:var(--dsg-blur);
-    border:1px solid var(--dsg-stroke); box-shadow:var(--dsg-highlight), 0 12px 30px rgba(0,0,0,.6);
-    opacity:0; transition:opacity .14s ease; pointer-events:none; }
-  #dsg-seek .dsg-sk-prev.dsg-on{ opacity:1; }
-  #dsg-seek .dsg-sk-prev canvas{ display:block; width:100%; height:auto; border-radius:8px; background:#000; }
-  #dsg-seek .dsg-sk-prev-t{ text-align:center; font-size:.85vw; font-weight:700; padding:.45vh 0 .1vh; opacity:.92; font-variant-numeric:tabular-nums; }
 
   /* number entry */
   #dsg-number{ position:absolute; top:4vh; right:3vw; padding:1.4vh 1.8vw; border-radius:18px; font-size:3.2vw; font-weight:800; letter-spacing:6px; font-variant-numeric:tabular-nums;
@@ -195,7 +187,7 @@
   <div id="dsg-app">
     <div id="dsg-banner"><div class="dsg-no"></div><div class="dsg-logobox"><img alt=""></div><div class="dsg-mid"><div class="dsg-name"></div><div class="dsg-prog"></div><div class="dsg-progress"><i></i></div><div class="dsg-next"></div></div><div class="dsg-tag">▸</div><div class="dsg-star"></div><div class="dsg-clock"></div></div>
 
-    <div id="dsg-seek"><div class="dsg-sk-pp">II</div><div class="dsg-sk-cur">CANLI</div><div class="dsg-sk-track"><div class="dsg-sk-buf"></div><div class="dsg-sk-played"></div><div class="dsg-sk-handle"></div><div class="dsg-sk-prev"><canvas width="256" height="144"></canvas><div class="dsg-sk-prev-t"></div></div></div><div class="dsg-sk-live">● CANLI</div><div class="dsg-sk-hint">◀▶ Geri/İleri · OK Oynat/Duraklat · ▼ Yayın Akışı</div></div>
+    <div id="dsg-seek"><div class="dsg-sk-pp">II</div><div class="dsg-sk-cur">CANLI</div><div class="dsg-sk-track"><div class="dsg-sk-buf"></div><div class="dsg-sk-played"></div><div class="dsg-sk-handle"></div></div><div class="dsg-sk-live">● CANLI</div><div class="dsg-sk-hint">◀▶ Geri/İleri · OK Oynat/Duraklat · ▼ Yayın Akışı</div></div>
 
     <div id="dsg-number">0<small>Kanal no.</small></div>
 
