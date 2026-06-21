@@ -120,7 +120,8 @@
   #dsg-catchup .dsg-cu-title{ position:absolute; top:3.4vh; left:3vw; font-size:1.8vw; font-weight:800; letter-spacing:-.5px; }
   #dsg-catchup .dsg-cu-title span{ color:var(--dsg-accent); font-weight:700; }
   #dsg-catchup .dsg-cu-sub{ position:absolute; top:4.1vh; left:24vw; font-size:1.2vw; font-weight:700; opacity:.7; }
-  #dsg-catchup .dsg-cu-days{ position:absolute; top:7.8vh; left:2.4vw; width:42vw; display:flex; gap:.55vw; overflow:hidden; }
+  #dsg-catchup .dsg-cu-days{ position:absolute; top:7.8vh; left:2.4vw; width:42vw; overflow:hidden; }
+  #dsg-catchup .dsg-cu-days-inner{ display:flex; gap:.55vw; transition:transform .18s ease; }
   #dsg-catchup .dsg-cu-day{ font-size:.98vw; font-weight:700; padding:.7vh 1vw; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); opacity:.55; white-space:nowrap; flex:0 0 auto; }
   #dsg-catchup .dsg-cu-day.dsg-on{ background:var(--dsg-accent); border-color:var(--dsg-accent); color:#fff; opacity:1; }
   #dsg-catchup .dsg-cu-list{ position:absolute; top:13vh; bottom:3.4vh; left:2.4vw; width:42vw; overflow:hidden;
@@ -191,7 +192,7 @@
 
     <div id="dsg-guide"><div class="dsg-title">D‑Smart Go <span>App</span></div><div class="dsg-tabs"></div><div id="dsg-list"><div class="dsg-inner"></div></div><div class="dsg-help">▲▼ Gezin · OK Aç · ◀▶ Tümü/Favoriler<br>OK basılı = Favori · Geri Kapat</div></div>
 
-    <div id="dsg-catchup"><div class="dsg-cu-title">Yayın Akışı <span>· Geri İzle</span></div><div class="dsg-cu-sub"></div><div class="dsg-cu-days"></div><div class="dsg-cu-list"><div class="dsg-cu-inner"></div></div><div class="dsg-cu-help">▲▼ Gezin · ◀▶ Gün · OK Baştan izle / Canlıya dön · Geri Kapat</div></div>
+    <div id="dsg-catchup"><div class="dsg-cu-title">Yayın Akışı <span>· Geri İzle</span></div><div class="dsg-cu-sub"></div><div class="dsg-cu-days"><div class="dsg-cu-days-inner"></div></div><div class="dsg-cu-list"><div class="dsg-cu-inner"></div></div><div class="dsg-cu-help">▲▼ Gezin · ◀▶ Gün · OK Baştan izle / Canlıya dön · Geri Kapat</div></div>
 
     <div id="dsg-reconnect"><div class="dsg-rc-spin"></div><div class="dsg-rc-txt">Yeniden bağlanılıyor…</div></div>
     <div id="dsg-toast"></div>

@@ -41,29 +41,12 @@ var KEY = { Up: 38, Down: 40, Left: 37, Right: 39, OK: 13, Back: 10009, Exit: 10
   ChUp: 427, ChDown: 428, Red: 403, Green: 404, MediaPP: 10252, MediaPlay: 415, MediaPause: 19,
   Rew: 412, Fwd: 417, Info: 457 };
 
-// API endpoint base. Cross-origin /content etc. are CORS-blocked everywhere the
-// app runs on its own origin (incl. the TizenBrew webview at 127.0.0.1:8081), so
-// they go through a same-machine proxy that injects Origin:dsmartgo + a real UA:
-//   - TizenBrew (port 8081): the background NodeJS service (service.js) at :8086
-//   - PC dev (port 8088):    proxy.py, same-origin "/_p/<host>"
-//   - else:                  direct https (only works from the dsmartgo origin)
-var PROXY =
-  window.DSG_PROXY_BASE ? window.DSG_PROXY_BASE :
-  (location.port === '8088') ? '/_p/' :
-  (location.port === '8081') ? 'http://127.0.0.1:8086/p/' :
-  '';
+// API endpoint base. On the TV: direct https. On the localhost:8088 dev-proxy
+// (proxy.py): same-origin "/_p/<host>" so a normal browser can read the
+// responses AND the proxy injects Origin:dsmartgo that /content requires.
+var PROXY = (location.port === '8088') ? '/_p/' : (window.DSG_PROXY_BASE || '');
 function EP(h) { return PROXY ? PROXY + h : 'https://' + h; }
 function PX(u) { return PROXY && /^https?:\/\//.test(u) ? PROXY + u.replace(/^https?:\/\//, '') : u; }
-// When PROXY is a cross-port service (TizenBrew), it may not be listening yet on
-// app load — poll its /health before firing the first requests.
-function waitForProxy(cb) {
-  if (!/^https?:/.test(PROXY)) { cb(); return; }
-  var base = PROXY.replace(/\/p\/?$/, ''), tries = 0;
-  (function ping() {
-    fetch(base + '/health', { cache: 'no-store' }).then(function (r) { if (r && r.ok) { dbg('proxy service ready'); cb(); } else retry(); }, retry);
-    function retry() { if (++tries > 40) { dbg('proxy service not reachable — starting anyway'); cb(); return; } setTimeout(ping, 500); }
-  })();
-}
 
 function $(id) { return document.getElementById(id); }
 function esc(s) { return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
@@ -495,9 +478,9 @@ function openCatchup() {
 function closeCatchup() { catchupOpen = false; if (catchupEl) catchupEl.classList.remove('dsg-show'); }
 function drawCatchup() {
   if (!catchupEl) return; var inner = catchupEl.querySelector('.dsg-cu-inner'); if (!inner) return;
-  var ds = catchupEl.querySelector('.dsg-cu-days'), dh = '';
-  for (var o = 0; o >= -CU_DAYS_BACK; o--) dh += '<span class="dsg-cu-day' + (o === cuDay ? ' dsg-on' : '') + '">' + esc(cuDayLabel(o)) + '</span>';
-  if (ds) ds.innerHTML = dh;
+  var ds = catchupEl.querySelector('.dsg-cu-days-inner'), dh = '';
+  for (var o = -CU_DAYS_BACK; o <= 0; o++) dh += '<span class="dsg-cu-day' + (o === cuDay ? ' dsg-on' : '') + '">' + esc(cuDayLabel(o)) + '</span>';
+  if (ds) { ds.innerHTML = dh; scrollCatchupDays(); }
   var now = Date.now(), html = '';
   for (var i = 0; i < cuItems.length; i++) {
     var it = cuItems[i], focus = (i === cuIdx ? ' dsg-focus' : '');
@@ -508,6 +491,13 @@ function drawCatchup() {
     html += '<div class="dsg-cu-row' + focus + dim + '"><span class="dsg-cu-time">' + esc(fmtClock(it.start)) + '</span><span class="dsg-cu-name">' + esc(it.name) + '</span>' + badge + '</div>';
   }
   inner.innerHTML = html; scrollCatchup();
+}
+function scrollCatchupDays() {
+  var box = catchupEl.querySelector('.dsg-cu-days'), inner = box && box.querySelector('.dsg-cu-days-inner'); if (!inner) return;
+  var on = inner.querySelector('.dsg-cu-day.dsg-on'); if (!on) { inner.style.transform = 'translateX(0)'; return; }
+  var vis = box.clientWidth, full = inner.scrollWidth, center = on.offsetLeft + on.offsetWidth / 2;
+  var left = center - vis / 2, max = Math.max(0, full - vis);
+  if (left < 0) left = 0; if (left > max) left = max; inner.style.transform = 'translateX(' + (-left) + 'px)';
 }
 function scrollCatchup() {
   var box = catchupEl.querySelector('.dsg-cu-list'), inner = catchupEl.querySelector('.dsg-cu-inner'); if (!box || !inner) return;
@@ -695,8 +685,8 @@ function boot() {
   document.addEventListener('keydown', onKeyDown, true);
   document.addEventListener('keyup', onKeyUp, true);
   startReconnect();
-  dbg('PROXY=' + (PROXY || '(direct)'));
-  waitForProxy(function () { if (loadAuth()) startApp(); else showLogin(); });
+  dbg('NOTE: cross-origin /content works on the Tizen webview (CORS only blocks a desktop browser).');
+  if (loadAuth()) startApp(); else showLogin();
 }
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 

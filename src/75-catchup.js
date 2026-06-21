@@ -42,9 +42,9 @@ function openCatchup() {
 function closeCatchup() { catchupOpen = false; if (catchupEl) catchupEl.classList.remove('dsg-show'); }
 function drawCatchup() {
   if (!catchupEl) return; var inner = catchupEl.querySelector('.dsg-cu-inner'); if (!inner) return;
-  var ds = catchupEl.querySelector('.dsg-cu-days'), dh = '';
-  for (var o = 0; o >= -CU_DAYS_BACK; o--) dh += '<span class="dsg-cu-day' + (o === cuDay ? ' dsg-on' : '') + '">' + esc(cuDayLabel(o)) + '</span>';
-  if (ds) ds.innerHTML = dh;
+  var ds = catchupEl.querySelector('.dsg-cu-days-inner'), dh = '';
+  for (var o = -CU_DAYS_BACK; o <= 0; o++) dh += '<span class="dsg-cu-day' + (o === cuDay ? ' dsg-on' : '') + '">' + esc(cuDayLabel(o)) + '</span>';
+  if (ds) { ds.innerHTML = dh; scrollCatchupDays(); }
   var now = Date.now(), html = '';
   for (var i = 0; i < cuItems.length; i++) {
     var it = cuItems[i], focus = (i === cuIdx ? ' dsg-focus' : '');
@@ -55,6 +55,13 @@ function drawCatchup() {
     html += '<div class="dsg-cu-row' + focus + dim + '"><span class="dsg-cu-time">' + esc(fmtClock(it.start)) + '</span><span class="dsg-cu-name">' + esc(it.name) + '</span>' + badge + '</div>';
   }
   inner.innerHTML = html; scrollCatchup();
+}
+function scrollCatchupDays() {
+  var box = catchupEl.querySelector('.dsg-cu-days'), inner = box && box.querySelector('.dsg-cu-days-inner'); if (!inner) return;
+  var on = inner.querySelector('.dsg-cu-day.dsg-on'); if (!on) { inner.style.transform = 'translateX(0)'; return; }
+  var vis = box.clientWidth, full = inner.scrollWidth, center = on.offsetLeft + on.offsetWidth / 2;
+  var left = center - vis / 2, max = Math.max(0, full - vis);
+  if (left < 0) left = 0; if (left > max) left = max; inner.style.transform = 'translateX(' + (-left) + 'px)';
 }
 function scrollCatchup() {
   var box = catchupEl.querySelector('.dsg-cu-list'), inner = catchupEl.querySelector('.dsg-cu-inner'); if (!box || !inner) return;
