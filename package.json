@@ -2,9 +2,10 @@
   "name": "dsmartgo-app-poc",
   "appName": "D-Smart Go App",
   "version": "0.1.0",
-  "description": "Standalone TizenBrew 'apps' PoC for D-Smart Go live TV: own fast UI shell + hls.js, plays D-Smart's HLS directly via the reverse-engineered options/init + @daion signing chain. No D-Smart React/Next SPA load (that is what makes the mod slow to boot).",
+  "description": "Standalone TizenBrew app for D-Smart Go live TV: own fast UI shell + hls.js, plays D-Smart's HLS directly (no D-Smart React/Next SPA load). Free channels + login for premium and days-back catch-up.",
   "packageType": "app",
   "appPath": "index.html",
+  "serviceFile": "service.js",
   "keys": [
     "ChannelUp", "ChannelDown",
     "ColorF0Red", "ColorF1Green", "ColorF2Yellow", "ColorF3Blue", "Info",
