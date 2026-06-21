@@ -16,5 +16,5 @@ function play(url) {
     hls.loadSource(url); hls.attachMedia(v);
   } else if (v.canPlayType('application/vnd.apple.mpegurl')) { v.src = url; v.play().then(function () { unmute(v); }).catch(function () {}); }
   else dbg('No HLS support');
-  rcReset();
+  rcReset(); frameCacheReset();
 }
